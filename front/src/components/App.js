@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 // Assets
 import '../css/App.css';
 
+
 class App extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired
