@@ -10,7 +10,7 @@ class Home extends Component {
   render(){
     return(
 
-
+<div>
   <nav className="navbar navbar-light bg-link">
     <Link to= "/"className="navbar-brand" href="#">
       <img src={ img1 } width="100" height="30" alt="">
@@ -22,7 +22,10 @@ class Home extends Component {
       </form>
     </nav>
 
+  <h1 className="">Welcome to our platform
+  Discuss our brand and send your best recommendation!</h1>
 
+</div>
 
     );
   }
