@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 // Assets
 import '../css/App.css';
 
+// Components
+import Navbar from "./Navbar.js";
 
 class App extends Component {
   static propTypes = {
@@ -14,6 +16,7 @@ class App extends Component {
     const {children } = this.props;
     return (
       <div className="App">
+        <Navbar />
         {children}
       </div>
     );

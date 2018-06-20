@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import '../css/home.css';
 import img1 from "../images/group-5@3x.png";
 
-// Components
-import FormPost from './FormPost.js';
 
 class Navbar extends Component {
   render(){
@@ -21,8 +19,8 @@ class Navbar extends Component {
     <form className="form-inline">
       <button className="btn btn-link" type="button">Log in</button>
       <button className="btn btn-success" type="button">Register</button>
-      </form>
-    </nav>
+    </form>
+  </nav>
 
   <h1 className="">Welcome to our platform
   Discuss our brand and send your best recommendation!</h1>
