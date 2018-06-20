@@ -12,7 +12,7 @@ class Navbar extends Component {
     return(
 <div>
   <nav className="navbar navbar-light bg-link">
-    <Link to= "/"className="navbar-brand" href="#">
+    <Link to= "/"className="navbar-brand" >
       <img src={ img1 } width="100" height="30" alt="">
       </img>
     </Link>
