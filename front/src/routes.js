@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import App  from './components/App';
 import Home from './components/Home';
 import Page404 from './components/Page404';
+import Navbar from './components/Navbar';
 
 const AppRoutes = () =>
   <App>

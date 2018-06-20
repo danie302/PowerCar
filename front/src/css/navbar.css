@@ -1,0 +1,31 @@
+.Group-5 {
+  width: 155px;
+  height: 42px;
+  object-fit: contain;
+  margin-left: 62px;
+}
+
+.Welcome-to-our-platf {
+  width: 520px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #939eaf;
+
+}
+
+.Welcome-to-our-platf-text-style-1 {
+  width: 520px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 10;
+  font-style: normal;
+  margin-left: 74px;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #939eaf;
+}
