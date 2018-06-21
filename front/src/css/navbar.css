@@ -53,11 +53,9 @@
   color: #2d374a;
 }
 
-.Rectangle {
+.Rectangle_1 {
   width: 1920px;
-  height: 1200px;
-  background-color: #fafafa;
-  border: solid 1px #979797;
+  height: 200px;
 }
 
 .Welcome-to-our-platf {

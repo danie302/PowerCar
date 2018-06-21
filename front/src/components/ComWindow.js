@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-// Components
-import Filter from './Filter.js';
-
-class Window extends Component {
+class ComWindow extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -46,4 +43,4 @@ class Window extends Component {
   }
 }
 
-export default Window;
+export default ComWindow;
