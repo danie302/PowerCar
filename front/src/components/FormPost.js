@@ -1,6 +1,7 @@
 //Dependencies
 import React, { Component } from 'react';
-
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 // Assets
 
 class FormPost extends Component {
@@ -9,7 +10,8 @@ class FormPost extends Component {
     this.state = {
       name: "",
       title: "",
-      content: ""
+      content: "",
+      success: false
     }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -17,11 +19,38 @@ class FormPost extends Component {
   onChange(e){
     this.setState({[e.target.name]: e.target.value});
   }
-  onSubmit(e){
+
+  onSubmit(e) {
+    e.preventDefault();
+    const post={
+      name: this.state.name,
+      title: this.state.title,
+      content: this.state.content
+    }
+    axios({
+      method: 'post',
+      url: 'http://35.174.174.156/api/posts/create',
+      data: post,
+      config: {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    })
+    .then(res => {
+          console.log(res);
+          console.log(res.data);
+          this.setState({success: true});
+    })
+        .catch(err => console.log(err));
+        console.log(post);
 
   }
 
   render(){
+    if(this.state.success) {
+      return( <Redirect to="/posts"/>);
+    }
     return(
       <div>
         <form action="/action_page.php">
@@ -37,12 +66,7 @@ class FormPost extends Component {
             <label for="pwd">Comment</label>
             <input type="String" className="form-control" name="content" onChange={this.onChange} value={this.state.content}/>
           </div>
-          <div className="form-group form-check">
-            <label className="form-check-label" >
-              <input className="form-check-input" type="checkbox"/> Remember me
-            </label>
-          </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button  className="btn btn-primary" onClick={this.onSubmit} href="/posts"  >Submit</button>
         </form>
       </div>
     );

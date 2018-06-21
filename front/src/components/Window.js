@@ -1,6 +1,7 @@
 //Dependencies
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Window extends Component {
   constructor(props){
@@ -11,20 +12,20 @@ class Window extends Component {
   }
 
   componentWillMount() {
-    fetch('https://jsonplaceholder.typicode.com/comments')
-      .then(res => res.json())
-      .then(data => this.setState({comments: data}))
-  }
+    fetch('http://35.174.174.156/api/posts')
+    .then(res => res.json())
+    .then(json  => this.setState({comments: json.posts}))
+}
 
   render(){
     const postItems = this.state.comments.map(comments => (
       <div key={comments.id} className="card">
         <div class="card-header">
-          Comment
+          {comments.title}
         </div>
         <div class="card-body ">
-          <h5 className="card-title">{comments.email}</h5>
-          <p className="card-text">{comments.body}</p>
+          <h5 className="card-title">{comments.name}</h5>
+          <p className="card-text">{comments.content}</p>
           <Link to="/posts" class="btn btn-primary">Comment</Link>
         </div>
       </div>
