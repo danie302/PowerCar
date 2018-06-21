@@ -7,9 +7,10 @@ import '../css/navbar.css';
 import '../css/form-inline2.css';
 import img1 from "../images/group-5@3x.png";
 import img2 from "../images/group@3x.png";
+import img3 from "../images/search-right-1507@3x.png";
 
 
-class Navbar extends Component {
+class Filter extends Component {
   render(){
     return(
 
@@ -26,15 +27,26 @@ class Navbar extends Component {
   </div>
   <div className="Backgrounds">
     <button className="btn btn-success" type="button">Make a post</button>
+
   </div>
-
-  <img className="Group" src={ img2 } >
-  </img>
-
+    <div className="Container">
+      <img className="search_right-1507" src={ img3 } >
+      </img>
+      <p className="Search">Search...</p>
+  </div>
+  <div className="Filter">Filter</div>
+  <div className="Container-2">
+    <div className="Container-2-2">
+      <p className="Font-Filter-Text">New</p>
+      <p className="Font-Filter-Text">Old</p>
+      <p className="Font-Filter-Text">Most comments</p>
+      <p className="Font-Filter-Text">Most Share</p>
+    </div>
+  </div>
 </div>
 
     );
   }
 }
 
-export default Navbar;
+export default Filter;

@@ -7,6 +7,7 @@ import '../css/App.css';
 
 // Components
 import Navbar from "./Navbar.js";
+import Filter from "./Filter.js";
 
 class App extends Component {
   static propTypes = {
