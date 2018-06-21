@@ -7,6 +7,7 @@ import App  from './components/App';
 import Home from './components/Home';
 import Page404 from './components/Page404';
 import Navbar from './components/Navbar';
+import Filter from './components/Filter';
 
 const AppRoutes = () =>
   <App>
