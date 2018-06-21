@@ -1,0 +1,28 @@
+.formMarg{
+}
+.rect {
+  width: 1920px;
+  height: 1200px;
+}
+
+.discus{
+  width: 600px;
+
+height: 40px;
+
+font-family: AvenirNext;
+
+font-size: 20px;
+
+font-weight: 600;
+
+font-style: normal;
+
+font-stretch: normal;
+
+line-height: 2;
+
+letter-spacing: normal;
+
+color: #939eaf;
+}

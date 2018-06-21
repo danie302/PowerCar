@@ -2,7 +2,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+
 // Assets
+import "../css/Form.css";
+import "../css/home.css";
 
 class FormPost extends Component {
   constructor(props){
@@ -52,7 +55,7 @@ class FormPost extends Component {
       return( <Redirect to="/posts"/>);
     }
     return(
-      <div>
+      <div className="formMarg">
         <form action="/action_page.php">
           <div className="form-group">
             <label for="name">Nickname</label>
@@ -66,7 +69,7 @@ class FormPost extends Component {
             <label for="pwd">Comment</label>
             <input type="String" className="form-control" name="content" onChange={this.onChange} value={this.state.content}/>
           </div>
-          <button  className="btn btn-primary" onClick={this.onSubmit} href="/posts"  >Submit</button>
+          <button  className="btn btn-primary mgbtn " onClick={this.onSubmit} href="/posts"  >Submit</button>
         </form>
       </div>
     );

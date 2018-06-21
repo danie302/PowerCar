@@ -3,25 +3,44 @@ import React, { Component } from 'react';
 
 // Assets
 import '../css/home.css';
-import img2 from "../images/group@3x.png";
+import '../css/navbar.css';
+import "../css/Form.css";
 
 // Components
 import FormPost from './FormPost.js';
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+    this.state ={
+      number: 1
+    }
+    this.onClick = this.onClick.bind(this);
+  }
+  onClick(){
+    this.setState({number: 2});
+  }
   render(){
-    return(
-      <div>
-        <div>
-          <h1>Discuss your idea</h1>
-        </div>
-        <div className="Backgrounds">
-          <button className="btn btn-success" type="button">Make a post</button>
-        </div>
-        <FormPost />
-        <img className="Group" src={ img2 } ></img>
-      </div>
-    );
+
+      if(this.state.number == 1){
+        return(
+          <div className="backComps">
+            <div>
+              <button className="btn btn-success" type="button" onClick={this.onClick}>Make a Post</button>
+            </div>
+          </div>
+        )
+      }
+      if(this.state.number == 2){
+        return(
+          <div className="backComps">
+            <div>
+              <h1 className="formMarg discus">Discuss your idea</h1>
+            </div>
+            <FormPost />
+          </div>
+        )
+      }
   }
 }
 

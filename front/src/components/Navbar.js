@@ -14,8 +14,7 @@ class Navbar extends Component {
 
 <div className="Rectangle_1">
   <div className="Wrapper">
-    <img className="Group-5" src={ img1 } width="120" height="40" alt="">
-    </img>
+    <Link to="/" ><img className="Group-5" src={ img1 } width="120" height="40" alt="" /></Link>
     <Link to="/" className="Log-in" >Log in</Link>
     <button className="btn btn-success" type="button">Register</button>
   </div>
